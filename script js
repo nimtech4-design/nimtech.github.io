@@ -1,0 +1,28 @@
+// Simple carousel auto-slide
+let currentIndex = 0;
+const stories = document.querySelectorAll('.story');
+function showStory(index) {
+  stories.forEach((story, i) => {
+    story.style.display = i === index ? 'block' : 'none';
+  });
+}
+function nextStory() {
+  currentIndex = (currentIndex + 1) % stories.length;
+  showStory(currentIndex);
+}
+showStory(currentIndex);
+setInterval(nextStory, 3000); // change every 3 seconds
+
+// Gossip submission form
+const form = document.getElementById('gossipForm');
+const input = document.getElementById('gossipInput');
+const submitted = document.getElementById('submittedGossip');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const gossip = input.value.trim();
+  if (gossip) {
+    submitted.innerHTML = `<p><strong>Submitted Gossip:</strong> ${gossip}</p>`;
+    input.value = '';
+  }
+});
