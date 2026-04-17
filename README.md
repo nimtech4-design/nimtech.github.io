@@ -51,5 +51,31 @@
   <footer>
     <p>© 2026 Karatina Gossip. All Rights Reserved.</p>
   </footer>
+...
+  <section class="trending">
+    <h2>Trending Now</h2>
+    <div class="carousel">
+      <div class="story">Trending Story 1</div>
+      <div class="story">Trending Story 2</div>
+      <div class="story">Trending Story 3</div>
+      <div class="story">Trending Story 4</div>
+    </div>
+  </section>
+
+  <section class="community">
+    <h2>Share Your Juicy Story</h2>
+    <form id="gossipForm">
+      <textarea id="gossipInput" placeholder="Your gossip..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="submittedGossip"></div>
+  </section>
+
+  <footer>
+    <p>© 2026 Karatina Gossip. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html></body>
 </html>
